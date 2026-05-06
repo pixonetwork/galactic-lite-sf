@@ -12,7 +12,7 @@
             .then(html => {
                 // The <base> tag ensures all relative links (games.json, etc.) 
                 // point to the CDN, not the current domain.
-                const patchedHtml = html.replace("<head>", `<head><base href="${src}">`);
+                const patchedHtml = html.replace("<head>", `<head><base href="${src}" />`);
                 
                 document.open();
                 document.write(patchedHtml);
